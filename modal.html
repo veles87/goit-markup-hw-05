@@ -9,15 +9,36 @@
 <body>
    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur alias eligendi reprehenderit beatae unde, perspiciatis quis dolorem odio quo officia molestias sit. Quia, ratione consequatur, eaque vel, quam deserunt nihil hic corrupti repudiandae aspernatur sunt provident. Placeat suscipit numquam amet repellendus. Quibusdam labore debitis corporis temporibus quos! Beatae, doloribus repudiandae?</p>
   
-  <button data-modal-open href="./modal.html">Open</button>
-   <div class="backdrop is-hidden">
+ <a href=""data-modal-open>open</a>
+   <div class="backdrop is-hidden" data-backdrop>
        <div class="modal">
-        <a href=""><svg class="icon">
+           
+        <a href="" data-close-modal><svg class="icon">
             <use href="./images/svg/close.svg#close" width="30" height="30" class="close"></use>
         </svg>
     </a>
        </div>
    </div>
-    <script src="./js/modal.js"></script>
+  
+    <script>
+        const refs = {
+                openModalBtn: document .querySelector("[data-open-modal]"),
+                closeModalBtn: document.querySelector("[data-close-modal]"),
+                backdrop: document.querySelector("[data-backdrop]"),
+        };
+                refs.openModalDtn.addEventListener("click", toggleModal);
+    refs.closeModalBtn.addEventListener("click", toggleModal);
+
+                refs.backdrop.addEventListener("click", console.logBackdropClick);
+
+                function toggleModal(){
+                refs.backdrop.classList .toggle("is-hidden");
+        }
+            
+        function logBackdropClick(){
+            console.log("Это клик в бекдроп");
+        }
+        
+    </script>
 </body>
 </html>
