@@ -142,6 +142,21 @@ header {
 .contacts-footer:focus {
   color: var(--special-text-color);
 }
+.link-current {
+  position: relative;
+}
+.link-current::after {
+  position: absolute;
+  content: '';
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  bottom: 0;
+
+  background-color: var(--hover-color);
+}
+
 /*main-nav*/
 .main-nav {
   display: flex;
