@@ -1108,23 +1108,28 @@ footer {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   z-index: 2;
+  transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.7);
+}
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+
   width: 528px;
   height: 581px;
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
 }
 .close {
   display: block;
@@ -1147,6 +1152,7 @@ footer {
 .card-portfolios {
   position: relative;
 }
+
 .card-overlay > p {
   padding: 63px 24px;
 }
@@ -1165,7 +1171,7 @@ footer {
 .card-overlay {
   position: absolute;
   bottom: 1px;
-  left: auto;
+  left: 0;
   opacity: 0;
   background-color: rgba(33, 150, 243, 0.9);
   width: 370px;
@@ -1173,7 +1179,7 @@ footer {
 
   margin-bottom: 127px;
 
-  transform: translateY(100%);
+  transform: translateY(15%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1186,4 +1192,10 @@ footer {
 .portfolios-link:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+}
+.modal:hover {
+  transition-property: initial;
+  transition-duration: 500ms;
+  transition-timing-function: linear;
+  transition-delay: 0;
 }
