@@ -104,7 +104,7 @@ h2 {
   width: 1200px;
   height: 80px;
 }
-.headers {
+header {
   border-bottom: 1px solid #ececec;
 }
 
@@ -754,6 +754,9 @@ footer {
 .card-footer {
   flex-basis: calc((50% - 45px) / 2);
 }
+.card-footer:last-child {
+  flex-basis: calc(50% - 15px);
+}
 .social-networks {
   margin-left: 70px;
   padding-top: 15px;
@@ -1131,24 +1134,48 @@ footer {
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
 }
-.close {
-  display: block;
-  padding: 0;
-  margin-left: auto;
-  margin-top: 8px;
-  margin-right: 8px;
-  background: #ffffff;
-}
-.iconns {
-  width: 30px;
-  height: 30px;
-}
+
 .t {
   margin-top: 50px;
   margin-left: 100px;
   margin-right: 100px;
 }
+.modal:hover {
+  transition-property: initial;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+  transition-delay: 0;
+}
+.buttom-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
 
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.icon-close {
+  fill: #000000;
+  margin-left: 1px;
+}
+.icon-close:hover,
+.icon-close:focus {
+  fill: var(--hover-color);
+}
+.buttom-close:hover,
+.buttom-close:focus {
+  fill: var(--hover-color);
+  border: 1px solid var(--hover-color);
+}
+.buttom-close:hover .icon-close,
+.buttom-close:focus .icon-close {
+  stroke: var(--hover-color);
+}
+/*Выезэающий синий фон*/
 .card-thumb {
   position: relative;
   overflow: hidden;
@@ -1191,10 +1218,4 @@ footer {
 .portfolios-link:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-}
-.modal:hover {
-  transition-property: initial;
-  transition-duration: 500ms;
-  transition-timing-function: linear;
-  transition-delay: 0;
 }
