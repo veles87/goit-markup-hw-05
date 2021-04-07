@@ -1119,9 +1119,7 @@ footer {
   opacity: 0;
   pointer-events: none;
 }
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.7);
-}
+
 .modal {
   position: absolute;
   top: 50%;
