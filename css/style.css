@@ -22,12 +22,20 @@ p {
   padding-left: 0;
   margin: 0;
 }
-
 .link {
   text-decoration: none;
   color: inherit;
+  transition: color var(--animation);
+}
 
-  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+.links {
+  color: inherit;
+
+  font-style: normal;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 img {
   display: block;
@@ -51,6 +59,7 @@ img {
   --card-shadow-hover: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   --card-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.12);
   --foto-bg-color: rgba(47, 48, 58, 0.8);
+  --animation: 300ms ease-in;
 }
 
 .body {
@@ -558,6 +567,8 @@ h3 {
   border-radius: 4px;
   margin-left: auto;
   margin-right: auto;
+
+  transition: color var(--animation);
 }
 .sections {
   margin-top: 94px;
@@ -578,6 +589,7 @@ h3 {
   height: 90px;
   display: inline-grid;
   margin-right: 30px;
+  transition: color var(--animation);
 }
 
 .fls {
@@ -755,13 +767,14 @@ footer {
 }
 
 .card-footer {
+  width: 231px;
   flex-basis: calc((50% - 45px) / 2);
 }
 .card-footer:last-child {
   flex-basis: calc(50% - 15px);
 }
 .social-networks {
-  margin-left: 70px;
+  width: 206px;
   padding-top: 15px;
 }
 
@@ -793,6 +806,7 @@ footer {
 
 .address {
   display: block;
+  width: 231px;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -808,6 +822,8 @@ footer {
 }
 
 .address-item {
+  width: 225px;
+  margin: 0;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
