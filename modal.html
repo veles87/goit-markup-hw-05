@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal</title>
+</head>
+<body>
+    <button type="button" class="buttons" data-modal-open><span class="buts">Заказать услугу</span></button>
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button class="buttom-close" data-modal-close>
+
+            <svg class="icon-close" width="11" height="11">
+                <use href="./images/close-new.svg#icon-close"></use>
+            </svg>
+        </button>
+      
+
+    </div>
+</div>
+    <script src="./js/modal.js"></script>
+    <script>
+        (() => {
+
+            document
+                .querySelector('.js-speaker-form')
+                .addEventListener('submit', e => {
+
+                    e.preventDefault();
+
+
+
+                    new FormData(e.currentTarget).forEach((value, name) =>
+
+                        console.log(`${name}: ${value}`),
+
+                    );
+
+                });
+
+        })();
+    </script>
+</body>
+</html>

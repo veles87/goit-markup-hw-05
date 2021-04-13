@@ -1151,18 +1151,13 @@ footer {
 
   width: 528px;
   height: 581px;
-  padding: 40px 40px;
+
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
 }
 
-.t {
-  margin-top: 50px;
-  margin-left: 100px;
-  margin-right: 100px;
-}
 .modal:hover {
   transition-property: initial;
   transition-duration: 250ms;
@@ -1198,7 +1193,55 @@ footer {
 .buttom-close:focus .icon-close {
   stroke: var(--hover-color);
 }
-/*Выезэающий синий фон*/
+/*form */
+textarea {
+  resize: none;
+}
+.form {
+  position: relative;
+  width: 448px;
+  outline: 1px solid chartreuse;
+  margin-left: auto;
+  margin-right: auto;
+
+  /*margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 20px;*/
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+.form-texts {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+  margin: 40px 40px 12px 40px;
+}
+
+.form-field label {
+  padding-top: 0;
+}
+.form-field input {
+  padding: 5px 10px;
+  width: 448px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.form-feedback {
+  display: flex;
+  flex-direction: column;
+}
+/*Выезжающий синий фон*/
 .card-thumb {
   position: relative;
   overflow: hidden;
@@ -1275,4 +1318,123 @@ footer {
 .portfolios-link:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+}
+/*footer joine*/
+.card-footer {
+  width: 231px;
+  flex-basis: calc((50% - 45px) / 2);
+}
+.card-footer:last-child {
+  flex-basis: calc(50% - 15px);
+}
+.social-networks {
+  width: 206px;
+  padding-top: 15px;
+}
+
+.social-networks-list {
+  display: inline-flex;
+}
+.join {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 0.87;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--white-color-text);
+  margin-bottom: 20px;
+}
+.position-join {
+  padding-top: 15px;
+}
+.btn {
+  background-color: var(--hover-color);
+  color: var(--white-color-text);
+  font-family: Roboto;
+  font-style: normal;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--buttos-hover-color);
+  color: var(--white-color-text);
+}
+.footer-form-submit {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  padding: 10px 28px 10px 28px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 2;
+  background-color: var(--hover-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-submit:hover,
+.footer-form-submit:focus {
+  background-color: var(--buttos-hover-color);
+  color: var(--white-color-text);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.footer-form {
+  display: flex;
+  align-items: baseline;
+}
+
+.social-icon-footer {
+  margin-left: 10px;
+  fill: var(--white-color-text);
+}
+.footer-form-input {
+  width: 358px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.6);
+  background-color: var(--bg-color);
+  border-radius: 4px;
+  padding: 15px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  margin-right: 12px;
+}
+.our-contacts {
+  display: flex;
+}
+
+.card-footer {
+  width: 231px;
+  flex-basis: calc((50% - 45px) / 2);
+}
+.card-footer:last-child {
+  flex-basis: calc(50% - 15px);
+}
+.social-networks {
+  width: 206px;
+  padding-top: 15px;
+}
+
+.social-networks-list {
+  display: inline-flex;
+}
+.social-icon-footer {
+  margin-left: 10px;
+  fill: var(--white-color-text);
 }

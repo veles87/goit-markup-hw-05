@@ -408,9 +408,19 @@
             </ul>
 
         </div>
-<!--<div class="card-footer">
-    <p>Подпишитесь на рассылку</p>
-</div>-->
+<div class="card-footer position-join">
+    <h4 class="join">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h4>
+    <form name="footer-form" class="footer-form" novalidate>
+        <label for="user_email" class="footer-form-lable">
+            <input placeholder="E-mail" type="email" name="email" class="footer-form-input" id="user_email" />
+        </label>
+        <button type="submit" class="btn footer-form-submit">
+            Подписаться
+            <svg class="social-icon-footer" width="24" height="24">
+                <use href="./images/svg/form-icon.svg#icon-send"></use>
+            </svg>
+        </button>
+</div>
     </div>
 </footer>
 <!--modal windows-->
@@ -422,14 +432,69 @@
                     <use href="./images/close-new.svg#icon-close"></use>
                 </svg>
             </button>
+            <h4 class="form-texts">Оставьте свои данные, мы вам перезвоним</h4>
+            <form>
+               
+               <div  class="form "> 
+                  
+                    <div  class="form-field fields">
+                        <label >
+                            Имя
+                            <input type="text" name="username" autofocus />
+                        </label>
+                    </div>
+                    <div   class="form-field">
+                        <label >
+                            Телефон
+                            <input type="tel" name="telephone" autofocus class="input"/>
+                        </label>
+                    </div>
+                    <div   class="form-field">
+                        <label>
+                            Почта
+                            <input type="email" name="email" autofocus class="input"/>
+                        </label>
+                    </div>
+                    <div   class="form-feedback">
+                       
+                            Комментарий
+                            <textarea name="feedback" rows="8" placeholder="Введите текст" autofocus></textarea>
+                        
+                    </div>
+                </div>
+            
+                    <input type="checkbox" name="privat-policy" id="privat-policy">
+                <label for="privat-policy">Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a>
+                </label>
+            
+                <button type="submit">Отправить</button>
+            </form>
     
-            <p class="t">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit nemo odio vitae optio.
-                Optio
-                in distinctio nam dicta laudantium, itaque magni, et ipsa officia commodi quaerat. Odio, quia officia.</p>
         </div>
     </div>
 
 <script src="./js/modal.js"></script>
+<script>
+    (() => {
+
+        document
+            .querySelector('.js-speaker-form')
+            .addEventListener('submit', e => {
+
+                e.preventDefault();
+
+
+
+                new FormData(e.currentTarget).forEach((value, name) =>
+
+                    console.log(`${name}: ${value}`),
+
+                );
+
+            });
+
+    })();
+</script>
 </body>
 
 
